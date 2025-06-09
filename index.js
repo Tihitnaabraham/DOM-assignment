@@ -25,7 +25,7 @@ const  fruitImages = {
   "Mangoes": "images/mangor.png",
   "Bananas": "images/bananar.png",
   "Water Melons": "images/watermelonr.png",
-  "Orange": "images/avocador.png"
+  "Avocado": "images/avocador.png"
 }
 document.querySelectorAll("#fruitList li").forEach(li => {
     const fruitName = li.firstChild.textContent.trim();
@@ -48,25 +48,36 @@ document.querySelectorAll("#fruitList li").forEach(li => {
 // Add one more vegetable to the vegetables list
 const VegetableLists=document.getElementById("vegetableList")
 const newVegetable=document.createElement("li")
-newVegetable.textContent="Karot"
+newVegetable.textContent="Carrot"
 VegetableLists.append(newVegetable);
 
+const vegImages = {
+    "Onions":"images/onionr.png",
+    "Tomatoes":"images/tomator.png",
+    "Kales":"images/kalesr.png",
+    "Carrot":"images/karotr.png"
+
+}
+
+
+document.querySelectorAll("#vegetableList li").forEach(li => {
+    const vegName = li.firstChild.textContent.trim();
+    if (vegImages[vegName]) {
+      const img = document.createElement("img");
+      img.src = vegImages[vegName];
+      img.alt = vegName;
+      img.className = "vegetable-image";
+      li.appendChild(img);
+    }
+  });
 
 
 
-// const image=document.getElementById("title");
-const img = document.createElement('img');
-img.src = 'images/avocador.png';
-const targetElement = document.getElementById('fruitList');
-targetElement.appendChild(img); 
-
-// document.getElementById("mango").src = "image/mangor.png";
 
 
-const imgveg = document.createElement('imgveg');
-imgveg.src ='image/karot.jpeg';
-const vegetable = document.getElementById('vegetableList');
-vegetable.appendChild(imgveg); 
+
+
+
 
 const pop=document.getElementById("fruitList")
 const popveg=document.getElementById("vegetableList")
@@ -87,22 +98,6 @@ popvegetable.addEventListener("click",function(){
 })
 
 
-
-// const img1 = document.createElement('img1');
-// img1.src = 'images/mangor.png';
-// const mango = document.getElementById('mango');
-// mango.appendChild(img1); 
-
-// const img2 = document.createElement('img2');
-// img2.src = 'images/bananar.jpeg';
-// const banana = document.getElementById('banana');
-// banana.appendChild(img2); 
-
-
-// const img3 = document.createElement('img3');
-// img.src = 'images/watermelonr.jpeg';
-// const watermelon = document.getElementById('banana');
-// watermelon.appendChild(img3); 
 
   
 document.getElementById("fruitList").appendChild(img)
