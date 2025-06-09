@@ -21,6 +21,13 @@ body{
    text-align: center;
 }
 
+#insidebar a:hover{
+    transform: scale(1.5);
+    color: rgb(223, 135, 135);;
+    background: white;
+    border-radius: 5px;
+}
+
 
 #navbar a {
     color: white;

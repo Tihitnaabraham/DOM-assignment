@@ -100,7 +100,7 @@ popvegetable.addEventListener("click",function(){
 
 
   
-document.getElementById("fruitList").appendChild(img)
+
 
 const clickWord=document.getElementById("subtitle");
 clickWord.addEventListener("click",()=>{
